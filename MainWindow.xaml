@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApp"
         mc:Ignorable="d"
-        Title="WeatherApp" MinHeight="450" MinWidth="800" Height="450" Width="800"
-        Background="#F6F6F6">
-    <Grid>
+        Title="WeatherApp" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Grid Background="Transparent">
         
         <!-- Main grid row definitions -->
         <Grid.RowDefinitions>
@@ -17,39 +16,44 @@
         </Grid.RowDefinitions>
         
         <!-- Header grid -->
-        <Grid Grid.Row="0" Background="Black">
+        <Border>
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Opacity="0.8" />
+            </Border.Effect>
+            
+            <Grid Grid.Row="0" Background="Azure">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
                 
-            <!-- Title -->
-            <StackPanel Grid.Column="0" Background="DarkOrange" Orientation="Horizontal" VerticalAlignment="Center">
-                <Label FontSize="39" FontWeight="Bold" Margin="15,0,0,0">WEATHER APP</Label>
-            </StackPanel>
+                <!-- Title -->
+                <StackPanel Grid.Column="0" Background="DarkOrange" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Label FontSize="39" FontWeight="Bold" Margin="15,0,0,0">WEATHER APP</Label>
+                </StackPanel>
             
-            <!-- City search-bar -->
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="2*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <!-- City search-bar -->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                 
-                <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
-                <Button Grid.Row="1" Grid.Column="3">SZUKAJ</Button>
+                    <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                    <Button Grid.Row="1" Grid.Column="3">SZUKAJ</Button>
+                </Grid>
             </Grid>
-        </Grid>
-        
+        </Border>
         <!-- Information grid -->
-        <Grid Grid.Row="1" Background="Aqua"></Grid>
+        <Grid Grid.Row="1"></Grid>
         
         <!-- Footer -->
         <Grid Grid.Row="2" Background="LightGreen">
