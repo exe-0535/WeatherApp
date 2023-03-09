@@ -9,5 +9,45 @@
         Background="#F6F6F6">
     <Grid>
         
+        <!-- Main grid row definitions -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Header grid -->
+        <Grid Grid.Row="0" Background="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+                
+            <!-- Title -->
+            <StackPanel Grid.Column="0" Background="DarkOrange" Orientation="Horizontal" VerticalAlignment="Center">
+                <Label FontSize="39" FontWeight="Bold" Margin="15,0,0,0">WEATHER APP</Label>
+            </StackPanel>
+            
+            <!-- City search-bar -->
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                <Button Grid.Row="1" Grid.Column="3">SZUKAJ</Button>
+            </Grid>
+        </Grid>
+        
+        <!-- Information grid -->
+        <Grid Grid.Row="1" Background="Aqua"></Grid>
     </Grid>
 </Window>
