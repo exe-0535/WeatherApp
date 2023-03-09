@@ -11,8 +11,9 @@
         
         <!-- Main grid row definitions -->
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
         <!-- Header grid -->
@@ -49,5 +50,12 @@
         
         <!-- Information grid -->
         <Grid Grid.Row="1" Background="Aqua"></Grid>
+        
+        <!-- Footer -->
+        <Grid Grid.Row="2" Background="LightGreen">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label>© 2023 Igor Wdowiczak</Label>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
