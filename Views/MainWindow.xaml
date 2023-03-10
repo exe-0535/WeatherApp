@@ -123,11 +123,17 @@
                                 <RowDefinition Height="*"/> <!-- Sunrise -->
                                 <RowDefinition Height="*"/> <!-- Sunset -->
                                 <RowDefinition Height="*"/> <!-- Timezone -->
-                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/> <!-- Placeholder -->
                             </Grid.RowDefinitions>
                         </Grid>
                     </Grid>
-                    <Grid Grid.Column="3" Background="#FAFA43"></Grid>
+                    <Grid Grid.Column="3" Background="#FAFA43">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/> <!-- X Coordinates -->
+                            <RowDefinition Height="*"/> <!-- Y Coordinates -->
+                            <RowDefinition Height="5*"/> <!-- Placeholder -->
+                        </Grid.RowDefinitions>
+                    </Grid>
                 </Grid>
                 
                 <!-- Small data grid -->
