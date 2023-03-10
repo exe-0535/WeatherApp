@@ -78,7 +78,36 @@
             </Grid>
         </Border>
         <!-- Information grid -->
-        <Grid Grid.Row="1"></Grid>
+        <Grid Grid.Row="1">
+            
+            <Grid Margin="25,14" Background="Aqua">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <!-- Main data grid -->
+                <Grid Grid.Row="0" Background="Bisque">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/> <!-- Weather data -->
+                        <ColumnDefinition Width="*"/> <!-- Wind data -->
+                        <ColumnDefinition Width="*"/> <!-- City name / Country / Sunrise / Sunset / Timezone data -->
+                        <ColumnDefinition Width="*"/> <!-- Coordinates data -->
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Background="#FFAA43"></Grid>
+                    <Grid Grid.Column="1" Background="#AAFF43"></Grid>
+                    <Grid Grid.Column="2" Background="#43AAFF"></Grid>
+                    <Grid Grid.Column="3" Background="#FAFA43"></Grid>
+                </Grid>
+                
+                <!-- Small data grid -->
+                <Grid Grid.Row="1" Background="DarkMagenta"></Grid>
+                
+            </Grid>
+                
+        </Grid>
         
         <!-- Footer -->
         <Grid Grid.Row="2" Background="LightGreen">
