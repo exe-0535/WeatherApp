@@ -105,7 +105,17 @@
                             </Grid.RowDefinitions>
                         </Grid>
                     </Grid>
-                    <Grid Grid.Column="1" Background="#AAFF43"></Grid>
+                    <Grid Grid.Column="1" Background="#AAFF43">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="2*"/> <!-- Wind header -->
+                                <RowDefinition Height="*"/> <!-- Speed -->
+                                <RowDefinition Height="*"/> <!-- Direction -->
+                                <RowDefinition Height="*"/> <!-- Gust -->
+                                <RowDefinition Height="2*"/> <!-- Placeholder -->
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </Grid>
                     <Grid Grid.Column="2" Background="#43AAFF"></Grid>
                     <Grid Grid.Column="3" Background="#FAFA43"></Grid>
                 </Grid>
