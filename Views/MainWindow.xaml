@@ -96,7 +96,15 @@
                         <ColumnDefinition Width="*"/> <!-- Coordinates data -->
                     </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0" Background="#FFAA43"></Grid>
+                    <Grid Grid.Column="0" Background="#FFAA43">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/> <!-- Main + icon -->
+                                <RowDefinition Height="*"/> <!-- Further description -->
+                                <RowDefinition Height="5*"/> <!-- Placeholder -->
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </Grid>
                     <Grid Grid.Column="1" Background="#AAFF43"></Grid>
                     <Grid Grid.Column="2" Background="#43AAFF"></Grid>
                     <Grid Grid.Column="3" Background="#FAFA43"></Grid>
