@@ -48,7 +48,7 @@
                     </Grid.ColumnDefinitions>
 
                     <!-- Search-box -->
-                    <TextBox Grid.Row="1" Grid.Column="1" TextAlignment="Center">
+                    <TextBox Grid.Row="1" Grid.Column="1" TextAlignment="Center" VerticalContentAlignment="Center">
                         <TextBox.Style>
                             <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                                 <Style.Resources>
