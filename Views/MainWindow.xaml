@@ -170,6 +170,31 @@
                                 <RowDefinition Height="*"/> <!-- Timezone -->
                                 <RowDefinition Height="2*"/> <!-- Placeholder -->
                             </Grid.RowDefinitions>
+                            
+                            <Grid Grid.Row="0">
+                                <StackPanel Orientation="Vertical" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label FontSize="18">CITY NAME</Label>
+                                    <Label FontSize="10">COUNTRY</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>Sunrise</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>Sunset</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>Timezone</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="4">
+
+                            </Grid>
                         </Grid>
                     </Grid>
                     <Grid Grid.Column="3" Background="#FAFA43">
