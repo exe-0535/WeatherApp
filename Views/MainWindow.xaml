@@ -28,9 +28,11 @@
             </Grid.ColumnDefinitions>
                 
                 <!-- Title -->
-                <StackPanel Grid.Column="0" Background="DarkOrange" Orientation="Horizontal" VerticalAlignment="Center">
-                    <Label FontSize="39" FontWeight="Bold" Margin="15,0,0,0">WEATHER APP</Label>
-                </StackPanel>
+                <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                    <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                        <Label FontSize="39" FontWeight="Bold" Margin="15,0,0,0">WEATHER APP</Label>
+                    </StackPanel>
+                </Viewbox>
             
                 <!-- City search-bar -->
                 <Grid Grid.Column="1">
@@ -90,7 +92,7 @@
             <Grid Margin="25,14" Background="Aqua">
                 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="3*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 
