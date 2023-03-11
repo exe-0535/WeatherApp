@@ -83,6 +83,7 @@
                 </Grid>
             </Grid>
         </Border>
+            
         <!-- Information grid -->
         <Grid Grid.Row="1">
             
@@ -109,6 +110,20 @@
                                 <RowDefinition Height="*"/> <!-- Further description -->
                                 <RowDefinition Height="5*"/> <!-- Placeholder -->
                             </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0" Background="#F3F">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>[ICON]</Label>
+                                    <Label>Weather</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="1" Background="#F32">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>Description</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="2" Background="#AF2">
+                            </Grid>
                         </Grid>
                     </Grid>
                     <Grid Grid.Column="1" Background="#AAFF43">
@@ -120,6 +135,30 @@
                                 <RowDefinition Height="*"/> <!-- Gust -->
                                 <RowDefinition Height="2*"/> <!-- Placeholder -->
                             </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>WIND</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>Speed</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>Direction</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
+                                    <Label>Gust</Label>
+                                </StackPanel>
+                            </Grid>
+                            <Grid Grid.Row="4">
+
+                            </Grid>
                         </Grid>
                     </Grid>
                     <Grid Grid.Column="2" Background="#43AAFF">
