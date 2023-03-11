@@ -52,7 +52,7 @@
                         <TextBox.Style>
                             <Style TargetType="TextBox" xmlns:sys="clr-namespace:System;assembly=mscorlib">
                                 <Style.Resources>
-                                    <VisualBrush x:Key="CueBannerBrush" AlignmentX="Left" AlignmentY="Center" Stretch="None">
+                                    <VisualBrush x:Key="CueBannerBrush" AlignmentX="Center" AlignmentY="Center" Stretch="None">
                                         <VisualBrush.Visual>
                                             <Label Content="Wprowadź nazwę miejscowości" Foreground="DarkGray" />
                                         </VisualBrush.Visual>
