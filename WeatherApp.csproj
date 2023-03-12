@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fonts\SfProRounded.ttf" />
     <None Remove="Assets\Icons\icon.png" />
     <None Remove="Assets\Icons\location.png" />
   </ItemGroup>
@@ -17,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\Fonts\SfProRounded.ttf" />
     <Resource Include="Assets\Icons\icon.png" />
     <Resource Include="Assets\Icons\location.png" />
   </ItemGroup>

@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:WeatherApp"
         xmlns:vm="clr-namespace:WeatherApp.ViewModel"
         Icon="/Assets/Icons/icon.png"
+        FontFamily="/Assets/Fonts/#SF Pro Rounded"
         mc:Ignorable="d"
         Title="WeatherApp" MinHeight="675" MinWidth="1200" Height="675" Width="1200">
     <Window.DataContext>
