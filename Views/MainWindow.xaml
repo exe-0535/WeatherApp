@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApp"
         mc:Ignorable="d"
-        Title="WeatherApp" MinHeight="450" MinWidth="800" Height="450" Width="800">
+        Title="WeatherApp" MinHeight="675" MinWidth="1200" Height="675" Width="1200">
     <Grid Background="Transparent">
         
         <!-- Main grid row definitions -->
@@ -95,7 +95,7 @@
         <!-- Information grid -->
         <Grid Grid.Row="1">
             
-            <Grid Margin="14,10,14,0" Background="Aqua">
+            <Grid Margin="14,10,14,0">
                 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>
@@ -103,7 +103,7 @@
                 </Grid.RowDefinitions>
                 
                 <!-- Main data grid -->
-                <Grid Grid.Row="0" Background="Bisque">
+                <Grid Grid.Row="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/> <!-- Weather data -->
                         <ColumnDefinition Width="*"/> <!-- Wind data -->
@@ -111,26 +111,30 @@
                         <ColumnDefinition Width="*"/> <!-- Coordinates data -->
                     </Grid.ColumnDefinitions>
 
-                    <Grid Grid.Column="0" Background="#FFAA43">
+                    <Grid Grid.Column="0">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/> <!-- Main + icon -->
+                                <RowDefinition Height="2*"/> <!-- Main + icon -->
                                 <RowDefinition Height="*"/> <!-- Further description -->
-                                <RowDefinition Height="5*"/> <!-- Placeholder -->
+                                <RowDefinition Height="4*"/> <!-- Placeholder -->
                             </Grid.RowDefinitions>
 
-                            <Grid Grid.Row="0" Background="#F3F">
-                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
-                                    <Label>[ICON]</Label>
-                                    <Label>Weather</Label>
-                                </StackPanel>
+                            <Grid Grid.Row="0">
+                                <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                        <Label>[icon]</Label>
+                                        <Label FontWeight="Bold">{}</Label>
+                                    </StackPanel>
+                                </Viewbox>
                             </Grid>
-                            <Grid Grid.Row="1" Background="#F32">
-                                <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
-                                    <Label>Description</Label>
-                                </StackPanel>
+                            <Grid Grid.Row="1">
+                                <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                    <StackPanel Orientation="Horizontal" Margin="10,0,0,0" VerticalAlignment="Center">
+                                        <Label>Description</Label>
+                                    </StackPanel>
+                                </Viewbox>
                             </Grid>
-                            <Grid Grid.Row="2" Background="#AF2">
+                            <Grid Grid.Row="2">
                             </Grid>
                         </Grid>
                     </Grid>
@@ -205,7 +209,7 @@
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid Grid.Column="3" Background="#FAFA43">
+                    <Grid Grid.Column="3">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="2*"/> <!-- Coordinates header -->
                             <RowDefinition Height="*"/> <!-- X Coordinates -->
@@ -214,21 +218,27 @@
                         </Grid.RowDefinitions>
 
                         <Grid Grid.Row="0">
-                            <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
-                                <Label>Coordinates</Label>
-                            </StackPanel>
+                            <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                    <Label>Współrzędne geograficzne</Label>
+                                </StackPanel>
+                            </Viewbox>
                         </Grid>
 
                         <Grid Grid.Row="1">
-                            <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
-                                <Label>X Coordinates</Label>
-                            </StackPanel>
+                            <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                    <Label FontWeight="Bold">Długość: {}</Label>
+                                </StackPanel>
+                            </Viewbox>
                         </Grid>
                         
                         <Grid Grid.Row="2">
-                            <StackPanel Orientation="Horizontal" Margin="25,0,0,0" VerticalAlignment="Center">
-                                <Label>Y Coordinates</Label>
-                            </StackPanel>
+                            <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                    <Label FontWeight="Bold">Szerokość: {}</Label>
+                                </StackPanel>
+                            </Viewbox>
                         </Grid>
                         
                         <Grid Grid.Row="3">
@@ -238,7 +248,7 @@
                 </Grid>
                 
                 <!-- Small data grid -->
-                <Grid Grid.Row="1" Background="DarkMagenta">
+                <Grid Grid.Row="1">
                     
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/> <!-- Data descriptions -->
