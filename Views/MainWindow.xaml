@@ -95,7 +95,7 @@
         <!-- Information grid -->
         <Grid Grid.Row="1">
             
-            <Grid Margin="25,14" Background="Aqua">
+            <Grid Margin="14,10,14,0" Background="Aqua">
                 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*"/>
@@ -238,8 +238,66 @@
                 </Grid>
                 
                 <!-- Small data grid -->
-                <Grid Grid.Row="1" Background="DarkMagenta"></Grid>
-                
+                <Grid Grid.Row="1" Background="DarkMagenta">
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/> <!-- Data descriptions -->
+                        <RowDefinition Height="*"/> <!-- Weather data -->
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/> <!-- Temperature -->
+                        <ColumnDefinition Width="*"/> <!-- 'Feels like' temperature -->
+                        <ColumnDefinition Width="*"/> <!-- Minimal temperature -->
+                        <ColumnDefinition Width="*"/> <!-- Maximum temperature -->
+                        <ColumnDefinition Width="*"/> <!-- Pressure -->
+                        <ColumnDefinition Width="*"/> <!-- Humidity -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Data descriptions -->
+                    
+                    <!-- Temperature -->
+                    <Viewbox Grid.Row="0" Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label FontSize="7">Temperatura</Label>
+                        </StackPanel>
+                    </Viewbox>
+
+                    <!-- 'Feels like' temperature -->
+                    <Viewbox Grid.Row="0" Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label FontSize="7">Temperatura odcz.</Label>
+                        </StackPanel>
+                    </Viewbox>
+
+                    <!-- Minimal temperature -->
+                    <Viewbox Grid.Row="0" Grid.Column="2" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label FontSize="7">Temperatura min.</Label>
+                        </StackPanel>
+                    </Viewbox>
+
+                    <!-- Maximum temperature -->
+                    <Viewbox Grid.Row="0" Grid.Column="3" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label FontSize="7">Temperatura max.</Label>
+                        </StackPanel>
+                    </Viewbox>
+
+                    <!-- Pressure -->
+                    <Viewbox Grid.Row="0" Grid.Column="4" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label FontSize="7">Ciśnienie</Label>
+                        </StackPanel>
+                    </Viewbox>
+
+                    <!-- Humidity -->
+                    <Viewbox Grid.Row="0" Grid.Column="5" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Label FontSize="7">Wilgotność</Label>
+                        </StackPanel>
+                    </Viewbox>
+                </Grid>
             </Grid>
                 
         </Grid>
