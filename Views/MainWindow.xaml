@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:WeatherApp"
         mc:Ignorable="d"
         Title="WeatherApp" MinHeight="675" MinWidth="1200" Height="675" Width="1200">
-    <Grid Background="Transparent">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="1 0" EndPoint="1 1">
+                <LinearGradientBrush.GradientStops>
+                    <GradientStop Offset="0.7" Color="#FFF" />
+                    <GradientStop Offset="1" Color="#FF7788DC" />
+                </LinearGradientBrush.GradientStops>
+            </LinearGradientBrush>
+        </Grid.Background>
         
         <!-- Main grid row definitions -->
         <Grid.RowDefinitions>
@@ -20,8 +28,15 @@
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Opacity="0.8" />
             </Border.Effect>
-            
-            <Grid Grid.Row="0" Background="Azure">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="1 1" EndPoint="0 1">
+                    <LinearGradientBrush.GradientStops>
+                        <GradientStop Offset="0.5" Color="#FFF" />
+                        <GradientStop Offset="1" Color="#4B5FC2" />
+                    </LinearGradientBrush.GradientStops>
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="3*"/>
@@ -82,15 +97,15 @@
                         </TextBox>
                     </Viewbox>
 
-                    <Button Grid.Row="1" Grid.Column="3" BorderThickness="0">
+                    <Button Grid.Row="1" Grid.Column="3" BorderThickness="0" Background="#4B5FC2">
                         
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>
                             </Style>
                         </Button.Resources>
-                        <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                            <Label FontSize="50">SZUKAJ</Label>
+                        <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                            <Label FontSize="50" Foreground="#FFF">SZUKAJ</Label>
                         </Viewbox>
                     </Button>
                 </Grid>
@@ -364,10 +379,10 @@
         </Grid>
         
         <!-- Footer -->
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2" Background="#4B5FC2">
             <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Label FontSize="7">© 2023 Igor Wdowiczak</Label>
+                    <Label FontSize="7" Foreground="#FFF">© 2023 Igor Wdowiczak</Label>
                 </StackPanel>
             </Viewbox>
         </Grid>
