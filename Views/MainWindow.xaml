@@ -262,11 +262,21 @@
                             <Label FontSize="7">Temperatura</Label>
                         </StackPanel>
                     </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
+                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
+                        </StackPanel>
+                    </Viewbox>
 
                     <!-- 'Feels like' temperature -->
                     <Viewbox Grid.Row="0" Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Label FontSize="7">Temperatura odcz.</Label>
+                        </StackPanel>
+                    </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
+                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
                         </StackPanel>
                     </Viewbox>
 
@@ -276,11 +286,21 @@
                             <Label FontSize="7">Temperatura min.</Label>
                         </StackPanel>
                     </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="2" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
+                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
+                        </StackPanel>
+                    </Viewbox>
 
                     <!-- Maximum temperature -->
                     <Viewbox Grid.Row="0" Grid.Column="3" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Label FontSize="7">Temperatura max.</Label>
+                        </StackPanel>
+                    </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="3" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
+                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
                         </StackPanel>
                     </Viewbox>
 
@@ -290,11 +310,21 @@
                             <Label FontSize="7">Ciśnienie</Label>
                         </StackPanel>
                     </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="4" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
+                            <Label FontSize="26" FontWeight="Bold">{} hPa</Label>
+                        </StackPanel>
+                    </Viewbox>
 
                     <!-- Humidity -->
                     <Viewbox Grid.Row="0" Grid.Column="5" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                             <Label FontSize="7">Wilgotność</Label>
+                        </StackPanel>
+                    </Viewbox>
+                    <Viewbox Grid.Row="1" Grid.Column="5" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
+                            <Label FontSize="26" FontWeight="Bold">{} %</Label>
                         </StackPanel>
                     </Viewbox>
                 </Grid>
