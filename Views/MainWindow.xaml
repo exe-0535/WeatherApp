@@ -70,7 +70,7 @@
 
                     <!-- Search-box -->
                     <Viewbox Grid.Row="1" Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TextBox TextAlignment="Center" VerticalContentAlignment="Center" MinWidth="200" FontSize="18" Name="CitySearch">
+                        <TextBox TextAlignment="Center" VerticalContentAlignment="Center" MinWidth="200" FontSize="18" Text="{Binding City}">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -101,7 +101,7 @@
                         </TextBox>
                     </Viewbox>
 
-                    <Button Grid.Row="1" Grid.Column="3" BorderThickness="0" Background="#4B5FC2">
+                    <Button Grid.Row="1" Grid.Column="3" BorderThickness="0" Background="#4B5FC2" Command="{Binding SearchCommand}">
                         
                         <Button.Resources>
                             <Style TargetType="Border">
@@ -146,15 +146,14 @@
                             <Grid Grid.Row="0">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Label>[icon]</Label>
-                                        <Label FontWeight="Bold">{}</Label>
+                                        <Label FontWeight="Bold" Content="{Binding Model.weather[0].main}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
                             <Grid Grid.Row="1">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" Margin="10,0,0,0" VerticalAlignment="Center">
-                                        <Label>Description</Label>
+                                        <Label Content="{Binding Model.weather[0].description}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
@@ -182,21 +181,14 @@
                             <Grid Grid.Row="1">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <Label FontWeight="Bold">Prędkość: {} Bft</Label>
+                                        <Label FontWeight="Bold" Content="{Binding Model.wind.speed}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
                             <Grid Grid.Row="2">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <Label FontWeight="Bold">Kierunek: </Label>
-                                    </StackPanel>
-                                </Viewbox>
-                            </Grid>
-                            <Grid Grid.Row="3">
-                                <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
-                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <Label FontWeight="Bold">W porywach do: {} Bft</Label>
+                                        <Label FontWeight="Bold" Content="{Binding Model.wind.deg}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
@@ -218,29 +210,28 @@
                             <Grid Grid.Row="0">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Label>[icon]</Label>
-                                        <Label FontWeight="Bold">Miejscowość, kraj</Label>
+                                        <Label Content="{Binding Model.name}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
                             <Grid Grid.Row="1">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <Label FontWeight="Bold" Content="{Binding }"></Label>
+                                        <Label FontWeight="Bold" Content="{Binding Model.sys.sunrise}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
                             <Grid Grid.Row="2">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <Label FontWeight="Bold">Zachód słońca: {}</Label>
+                                        <Label FontWeight="Bold" Content="{Binding Model.sys.sunset}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
                             <Grid Grid.Row="3">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <Label FontWeight="Bold">Strefa czasowa: {}</Label>
+                                        <Label FontWeight="Bold" Content="{Binding Model.timezone}"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
@@ -268,7 +259,7 @@
                         <Grid Grid.Row="1">
                             <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                    <Label FontWeight="Bold">Długość: {}</Label>
+                                    <Label FontWeight="Bold" Content="{Binding Model.coord.lon}"></Label>
                                 </StackPanel>
                             </Viewbox>
                         </Grid>
@@ -276,7 +267,7 @@
                         <Grid Grid.Row="2">
                             <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                    <Label FontWeight="Bold">Szerokość: {}</Label>
+                                    <Label FontWeight="Bold" Content="{Binding Model.coord.lat}"></Label>
                                 </StackPanel>
                             </Viewbox>
                         </Grid>
@@ -314,7 +305,7 @@
                     </Viewbox>
                     <Viewbox Grid.Row="1" Grid.Column="0" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
-                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
+                            <Label FontSize="26" FontWeight="Bold" Content="{Binding Model.main.temp}"></Label>
                         </StackPanel>
                     </Viewbox>
 
@@ -326,7 +317,7 @@
                     </Viewbox>
                     <Viewbox Grid.Row="1" Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
-                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
+                            <Label FontSize="26" FontWeight="Bold" Content="{Binding Model.main.feels_like}"></Label>
                         </StackPanel>
                     </Viewbox>
 
@@ -338,7 +329,7 @@
                     </Viewbox>
                     <Viewbox Grid.Row="1" Grid.Column="2" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
-                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
+                            <Label FontSize="26" FontWeight="Bold" Content="{Binding Model.main.temp_min}"></Label>
                         </StackPanel>
                     </Viewbox>
 
@@ -350,7 +341,7 @@
                     </Viewbox>
                     <Viewbox Grid.Row="1" Grid.Column="3" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
-                            <Label FontSize="26" FontWeight="Bold">{} °C</Label>
+                            <Label FontSize="26" FontWeight="Bold" Content="{Binding Model.main.temp_max}"></Label>
                         </StackPanel>
                     </Viewbox>
 
@@ -362,7 +353,7 @@
                     </Viewbox>
                     <Viewbox Grid.Row="1" Grid.Column="4" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
-                            <Label FontSize="26" FontWeight="Bold">{} hPa</Label>
+                            <Label FontSize="26" FontWeight="Bold" Content="{Binding Model.main.pressure}"></Label>
                         </StackPanel>
                     </Viewbox>
 
@@ -374,7 +365,7 @@
                     </Viewbox>
                     <Viewbox Grid.Row="1" Grid.Column="5" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,10">
-                            <Label FontSize="26" FontWeight="Bold">{} %</Label>
+                            <Label FontSize="26" FontWeight="Bold" Content="{Binding Model.main.humidity}"></Label>
                         </StackPanel>
                     </Viewbox>
                 </Grid>
