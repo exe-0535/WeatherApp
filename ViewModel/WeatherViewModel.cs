@@ -79,6 +79,7 @@ namespace WeatherApp.ViewModel
                 Info.wind.speed = Info.wind.speed.ToString() + " m/s";
                 Info.wind.deg = convertDegToText(Convert.ToInt32(Info.wind.deg));
                 Info.weather[0].description = FirstCharToUpper(Info.weather[0].description);
+                Info.timezone = (Convert.ToInt32(Info.timezone) / 3600).ToString() + " h";
 
                 ImageSourceUrl = string.Format("https://openweathermap.org/img/w/{0}.png", Info.weather[0].icon);
 

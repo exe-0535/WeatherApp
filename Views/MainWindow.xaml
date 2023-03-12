@@ -187,13 +187,14 @@
                             <Grid Grid.Row="0">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Label>Informacje o wietrze</Label>
+                                        <Label FontWeight="Bold">Informacje o wietrze</Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
                             <Grid Grid.Row="1">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                        <Label>Prędkość: </Label>
                                         <Label FontWeight="Bold" Content="{Binding Model.wind.speed}"></Label>
                                     </StackPanel>
                                 </Viewbox>
@@ -201,6 +202,7 @@
                             <Grid Grid.Row="2">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                        <Label>Kierunek: </Label>
                                         <Label FontWeight="Bold" Content="{Binding Model.wind.deg}"></Label>
                                     </StackPanel>
                                 </Viewbox>
@@ -223,13 +225,15 @@
                             <Grid Grid.Row="0">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                        <Label Content="{Binding Model.name}"></Label>
+                                        <Image Margin="5,0,0,0" MaxHeight="20" MaxWidth="20" Source="/Assets/Icons/location.png"/>
+                                        <Label Content="{Binding Model.name}" FontWeight="Bold" FontSize="20"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>
                             <Grid Grid.Row="1">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                        <Label>Wschód: </Label>
                                         <Label FontWeight="Bold" Content="{Binding Model.sys.sunrise}"></Label>
                                     </StackPanel>
                                 </Viewbox>
@@ -237,6 +241,7 @@
                             <Grid Grid.Row="2">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                        <Label>Zachód: </Label>
                                         <Label FontWeight="Bold" Content="{Binding Model.sys.sunset}"></Label>
                                     </StackPanel>
                                 </Viewbox>
@@ -244,6 +249,7 @@
                             <Grid Grid.Row="3">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                        <Label>Różnica czasu (UTC): </Label>
                                         <Label FontWeight="Bold" Content="{Binding Model.timezone}"></Label>
                                     </StackPanel>
                                 </Viewbox>
@@ -264,7 +270,7 @@
                         <Grid Grid.Row="0">
                             <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                                    <Label>Współrzędne geograficzne</Label>
+                                    <Label FontWeight="Bold">Współrzędne geograficzne</Label>
                                 </StackPanel>
                             </Viewbox>
                         </Grid>
@@ -272,6 +278,7 @@
                         <Grid Grid.Row="1">
                             <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                    <Label>Długość: </Label>
                                     <Label FontWeight="Bold" Content="{Binding Model.coord.lon}"></Label>
                                 </StackPanel>
                             </Viewbox>
@@ -280,6 +287,7 @@
                         <Grid Grid.Row="2">
                             <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
+                                    <Label>Szerokość: </Label>
                                     <Label FontWeight="Bold" Content="{Binding Model.coord.lat}"></Label>
                                 </StackPanel>
                             </Viewbox>
