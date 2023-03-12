@@ -32,18 +32,18 @@ namespace WeatherApp.Model
 
         public class Main
         {
-            public float temp { get; set; }
-            public float feels_like { get; set; }
-            public float temp_min { get; set; }
-            public float temp_max { get; set; }
-            public int pressure { get; set; }
-            public int humidity { get; set; }
+            public string temp { get; set; }
+            public string feels_like { get; set; }
+            public string temp_min { get; set; }
+            public string temp_max { get; set; }
+            public string pressure { get; set; }
+            public string humidity { get; set; }
         }
 
         public class Wind
         {
-            public float speed { get; set; }
-            public int deg { get; set; }
+            public string speed { get; set; }
+            public string deg { get; set; }
         }
 
         public class Clouds
@@ -56,8 +56,8 @@ namespace WeatherApp.Model
             public int type { get; set; }
             public int id { get; set; }
             public string country { get; set; }
-            public int sunrise { get; set; }
-            public int sunset { get; set; }
+            public string sunrise { get; set; }
+            public string sunset { get; set; }
         }
 
         public class Weather
