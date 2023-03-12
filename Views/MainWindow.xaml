@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherApp"
+        xmlns:vm="clr-namespace:WeatherApp.ViewModel"
         mc:Ignorable="d"
         Title="WeatherApp" MinHeight="675" MinWidth="1200" Height="675" Width="1200">
+    <Window.DataContext>
+        <vm:WeatherViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="1 0" EndPoint="1 1">
@@ -66,7 +70,7 @@
 
                     <!-- Search-box -->
                     <Viewbox Grid.Row="1" Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                        <TextBox TextAlignment="Center" VerticalContentAlignment="Center" MinWidth="200" FontSize="18">
+                        <TextBox TextAlignment="Center" VerticalContentAlignment="Center" MinWidth="200" FontSize="18" Name="CitySearch">
                             <TextBox.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="10"/>
@@ -222,7 +226,7 @@
                             <Grid Grid.Row="1">
                                 <Viewbox Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Stretch">
                                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="10,0,0,0">
-                                        <Label FontWeight="Bold">Wschód słońca: {}</Label>
+                                        <Label FontWeight="Bold" Content="{Binding }"></Label>
                                     </StackPanel>
                                 </Viewbox>
                             </Grid>

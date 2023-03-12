@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WeatherApp.ViewModel;
 
 namespace WeatherApp
 {
@@ -16,8 +17,10 @@ namespace WeatherApp
         protected override void OnStartup(StartupEventArgs e)
         {
             MainWindow = new MainWindow();
-            MainWindow.Show();
+            WeatherViewModel viewModel = new WeatherViewModel();
+            MainWindow.DataContext = viewModel;
 
+            MainWindow.Show();
             base.OnStartup(e);
         }
     }
