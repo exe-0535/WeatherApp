@@ -58,9 +58,11 @@
                 <!-- City search-bar -->
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="2*"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="2*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
@@ -103,15 +105,37 @@
                         </TextBox>
                     </Viewbox>
 
-                    <Button Grid.Row="1" Grid.Column="3" BorderThickness="0" Background="#4B5FC2" Command="{Binding SearchCommand}">
-                        
+
+                    <Button Grid.Row="3" Grid.Column="1" BorderThickness="0" Background="#4B5FC2" Command="{Binding SearchCommand}">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>
                             </Style>
                         </Button.Resources>
-                        <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Label FontSize="50" Foreground="#FFF">SZUKAJ</Label>
+                        </Viewbox>
+                    </Button>
+
+                    <Button Grid.Row="1" Grid.Column="3" BorderThickness="0" Background="#4B5FC2">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Label FontSize="50" Foreground="#FFF">OGÓLNE</Label>
+                        </Viewbox>
+                    </Button>
+
+                    <Button Grid.Row="3" Grid.Column="3" BorderThickness="0" Background="#4B5FC2">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"/>
+                            </Style>
+                        </Button.Resources>
+                        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Label FontSize="50" Foreground="#FFF">PROGNOZA</Label>
                         </Viewbox>
                     </Button>
                 </Grid>
