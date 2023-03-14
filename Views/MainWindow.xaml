@@ -51,7 +51,7 @@
                 <!-- Title -->
                 <Viewbox Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                     <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
-                        <Label FontSize="39" FontWeight="Bold" Margin="15,0,0,0">WEATHER APP</Label>
+                        <Label FontSize="39" FontWeight="Bold" Margin="15,0,0,0">Weather App</Label>
                     </StackPanel>
                 </Viewbox>
             
@@ -105,17 +105,18 @@
                         </TextBox>
                     </Viewbox>
 
-
-                    <Button Grid.Row="3" Grid.Column="1" BorderThickness="0" Background="#4B5FC2" Command="{Binding SearchCommand}">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="10"/>
-                            </Style>
-                        </Button.Resources>
-                        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Label FontSize="50" Foreground="#FFF">SZUKAJ</Label>
-                        </Viewbox>
-                    </Button>
+                    <Viewbox Grid.Row="3" Grid.Column="1" Stretch="Uniform" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <Button BorderThickness="0" Background="#4B5FC2" MinWidth="200" Command="{Binding SearchCommand}">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="20"/>
+                                </Style>
+                            </Button.Resources>
+                            <Viewbox Stretch="Uniform" VerticalAlignment="Center">
+                                <Label FontSize="50" Foreground="#FFF">Szukaj</Label>
+                            </Viewbox>
+                        </Button>
+                    </Viewbox>
 
                     <Button Grid.Row="1" Grid.Column="3" BorderThickness="0" Background="#4B5FC2">
                         <Button.Resources>
@@ -124,7 +125,7 @@
                             </Style>
                         </Button.Resources>
                         <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Label FontSize="50" Foreground="#FFF">OGÓLNE</Label>
+                            <Label FontSize="50" Foreground="#FFF">Ogólne</Label>
                         </Viewbox>
                     </Button>
 
@@ -135,7 +136,7 @@
                             </Style>
                         </Button.Resources>
                         <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <Label FontSize="50" Foreground="#FFF">PROGNOZA</Label>
+                            <Label FontSize="50" Foreground="#FFF">Prognoza</Label>
                         </Viewbox>
                     </Button>
                 </Grid>
