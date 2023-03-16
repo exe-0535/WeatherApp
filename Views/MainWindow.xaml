@@ -9,9 +9,6 @@
         FontFamily="/Assets/Fonts/#SF Pro Rounded"
         mc:Ignorable="d"
         Title="WeatherApp" MinHeight="675" MinWidth="1200" Height="675" Width="1200">
-    <Window.DataContext>
-        <vm:WeatherViewModel/>
-    </Window.DataContext>
     <Grid>
         <Grid.Background>
             <LinearGradientBrush StartPoint="1 0" EndPoint="1 1">
