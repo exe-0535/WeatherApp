@@ -16,7 +16,7 @@ namespace WeatherApp.ViewModel
     using static System.Net.Mime.MediaTypeNames;
     using static System.Net.WebRequestMethods;
 
-    public class WeatherViewModel : INotifyPropertyChanged
+    public class WeatherViewModel : BaseViewModel
     {
         private WeatherModel _model;
         public WeatherModel Model
@@ -116,13 +116,6 @@ namespace WeatherApp.ViewModel
             "" => throw new ArgumentException($"{nameof(input)} cannot be empty", nameof(input)),
             _ => string.Concat(input[0].ToString().ToUpper(), input.AsSpan(1))
         };
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        private void OnPropertyChanged(string propertyName)
-        {
-            if(PropertyChanged != null) PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         private class RelayCommand : ICommand
         {
